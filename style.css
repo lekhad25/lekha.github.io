@@ -1,177 +1,96 @@
-/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ROOT COLORS */
-:root {
-    --bg: #f9fafb;
-    --primary: #0a84ff;
-    --dark: #111827;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --card: #ffffff;
-    --border: #e5e7eb;
-}
-
-/* BODY */
 body {
-    background:
-        radial-gradient(circle at top, rgba(10,132,255,0.08), transparent 45%),
-        linear-gradient(180deg, #f9fafb, #eef2f7),
-        repeating-linear-gradient(
-            to right,
-            rgba(0,0,0,0.03) 0px,
-            rgba(0,0,0,0.03) 1px,
-            transparent 1px,
-            transparent 80px
-        ),
-        repeating-linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.03) 0px,
-            rgba(0,0,0,0.03) 1px,
-            transparent 1px,
-            transparent 80px
-        );
-    color: var(--text);
-    line-height: 1.65;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+               "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #1d1d1f;
+  line-height: 1.6;
 }
 
-
-/* HERO */
+/* Header */
 .hero {
-    background: radial-gradient(
-        circle at top,
-        #1f2937,
-        #020617
-    );
-    color: white;
-    padding: 90px 20px 80px;
-    text-align: center;
+  max-width: 900px;
+  margin: 100px auto 80px;
+  padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-.hero p {
-    margin-top: 12px;
-    font-size: 1.1rem;
-    color: #cbd5f5;
+.subtitle {
+  font-size: 18px;
+  color: #6e6e73;
+  margin-top: 8px;
 }
 
-/* LINKS */
 .links {
-    margin-top: 24px;
+  margin-top: 20px;
 }
 
 .links a {
-    margin: 0 12px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #0071e3;
+  font-weight: 500;
 }
 
-.links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background: var(--primary);
-    transition: width 0.3s ease;
-}
-
-.links a:hover::after {
-    width: 100%;
-}
-
-/* SECTIONS */
+/* Section */
 .section {
-    max-width: 900px;
-    margin: 70px auto;
-    padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
 }
 
 .section h2 {
-    font-size: 2rem;
-    margin-bottom: 24px;
-    letter-spacing: -0.4px;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-/* SKILLS */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
+/* Project Card */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid #e5e5e7;
 }
 
-.skills span {
-    background: rgba(10,132,255,0.1);
-    color: var(--primary);
-    padding: 10px 14px;
-    margin: 6px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 500;
+.project h3 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-/* CARD */
-.card {
-    background: var(--card);
-    padding: 26px;
-    margin-bottom: 26px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.project p {
+  margin: 8px 0;
+  color: #515154;
+  max-width: 600px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+.tech {
+  font-size: 14px;
+  color: #86868b;
 }
 
-.card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 6px;
+.repo {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0071e3;
+  white-space: nowrap;
 }
 
-.duration, .tech {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-bottom: 10px;
-}
-
-/* LISTS */
-.card ul {
-    margin-left: 18px;
-    margin-top: 12px;
-}
-
-.card ul li {
-    margin-bottom: 6px;
-}
-
-/* CARD LINKS */
-.card a {
-    display: inline-block;
-    margin-top: 14px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--muted);
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 40px 0;
+  color: #86868b;
+  font-size: 14px;
 }
